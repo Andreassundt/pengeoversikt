@@ -139,18 +139,25 @@ export function detectRecurring(txs: Transaction[], ctx: PostContext): Recurring
     }
     const sameCurrency = all.filter((m) => m.currency === currency);
     // Reference amount: the one with the most neighbours within ±10 %, latest on ties.
-    sameCurrency.sort((a, b) => (a.tx.statDate < b.tx.statDate ? -1 : 1));
+    // Sorted by amount with two pointers, so large groups (thousands of grocery purchases) stay fast.
+    const byAmount = [...sameCurrency].sort((a, b) => a.amount - b.amount || (a.tx.statDate < b.tx.statDate ? -1 : 1));
     let ref: Member | null = null;
     let refCount = -1;
-    for (const m of sameCurrency) {
-      const n = sameCurrency.filter((o) => diffPermyriad(o.amount, m.amount) <= 1000).length;
-      if (n >= refCount) {
+    let lo = 0;
+    let hi = 0;
+    for (const m of byAmount) {
+      while (lo < byAmount.length && byAmount[lo]!.amount * 10 < m.amount * 9) lo++;
+      while (hi < byAmount.length && byAmount[hi]!.amount * 10 <= m.amount * 11) hi++;
+      const n = hi - lo;
+      if (n > refCount || (n === refCount && ref && m.tx.statDate >= ref.tx.statDate)) {
         ref = m;
         refCount = n;
       }
     }
     if (!ref) continue;
-    const members = sameCurrency.filter((o) => diffPermyriad(o.amount, ref!.amount) <= 1000);
+    const members = sameCurrency
+      .filter((o) => diffPermyriad(o.amount, ref!.amount) <= 1000)
+      .sort((a, b) => (a.tx.statDate < b.tx.statDate ? -1 : a.tx.statDate > b.tx.statDate ? 1 : 0));
     const fast = members.some((m) => m.tx.fastHint);
     const dates = members.map((m) => m.tx.statDate);
     const gaps: number[] = [];
@@ -164,13 +171,12 @@ export function detectRecurring(txs: Transaction[], ctx: PostContext): Recurring
     const prev = members.length >= 2 ? members[members.length - 2]! : null;
     const priceChange = prev != null && diffPermyriad(last.amount, prev.amount) > 200;
     let possibleDouble = false;
+    // Members are sorted by date, so only a short window needs checking.
     for (let i = 0; i < members.length; i++) {
-      for (let j = i + 1; j < members.length; j++) {
-        if (Math.abs(daysBetween(members[i]!.tx.statDate, members[j]!.tx.statDate)) <= 3) {
-          possibleDouble = true;
-          if (!members[i]!.tx.doubleDismissed) setFlag(members[i]!.tx, 'possibleDouble', true);
-          if (!members[j]!.tx.doubleDismissed) setFlag(members[j]!.tx, 'possibleDouble', true);
-        }
+      for (let j = i + 1; j < members.length && daysBetween(members[i]!.tx.statDate, members[j]!.tx.statDate) <= 3; j++) {
+        possibleDouble = true;
+        if (!members[i]!.tx.doubleDismissed) setFlag(members[i]!.tx, 'possibleDouble', true);
+        if (!members[j]!.tx.doubleDismissed) setFlag(members[j]!.tx, 'possibleDouble', true);
       }
     }
     for (const m of members) {

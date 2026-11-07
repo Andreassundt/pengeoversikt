@@ -51,7 +51,8 @@ export function Categories() {
       <div className="space-y-3 p-4">
         {lookups.groupList.map((g) => (
           <Card key={g.id} className="p-0">
-            <h2 className="px-4 pt-3 text-xs font-semibold uppercase tracking-wide" style={{ color: g.color }}>
+            <h2 className="flex items-center gap-2 px-4 pt-3 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+              <span aria-hidden="true" className="inline-block h-2.5 w-2.5 rounded-full" style={{ backgroundColor: g.color }} />
               {g.name}
             </h2>
             <ul className="divide-y divide-slate-100 dark:divide-slate-800">

@@ -68,7 +68,8 @@ export function CategoryPicker({ open, onClose, onPick, categories, groups, quic
       )}
       {grouped.map(({ group, items }) => (
         <div key={group.id} className="mb-3">
-          <h3 className="mb-1 text-xs font-semibold uppercase tracking-wide" style={{ color: group.color }}>
+          <h3 className="mb-1 flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+            <span aria-hidden="true" className="inline-block h-2.5 w-2.5 rounded-full" style={{ backgroundColor: group.color }} />
             {group.name}
           </h3>
           <ul className="divide-y divide-slate-100 dark:divide-slate-800">

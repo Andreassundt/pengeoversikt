@@ -66,3 +66,12 @@ Valg som ikke står eksplisitt i PROMPT.md, med begrunnelse. Oppdateres per mile
 - **Web Share Target:** service workeren tar imot POST til `<base>share-target`, legger filene i en Cache (`pengeoversikt-shared-files`) med filnavn i en header, og svarer med redirect til `#/import?shared=n`. Appen leser og tømmer cachen når ruten `/import` åpnes, og åpner importarket med filene. Ingenting sendes noe sted.
 - **Ikoner** genereres fra en innebygd SVG med `sharp` (`npm run icons`): vanlig 192/512, maskable med ekstra luft, og apple-touch-icon 180.
 - **Deploy** bruker `BASE_PATH=/<repo>/` i workflowen; `start_url`, `scope` og share-target-adressen følger `base`, så appen virker både på rot og under et repo-navn på GitHub Pages.
+
+## Milepæl 6 – polering
+
+- **Ytelsestest** (`tests/unit/performance.test.ts`) lager 50 000 syntetiske rader (deterministisk generator i `tests/unit/synthetic.ts`, ingen ekte data) og måler import, reklassifisering og aggregering. På utviklingsmaskinen med fake-indexeddb: import ≈ 5 s, reklassifisering ≈ 1,3 s, 12 måneders aggregering ≈ 60 ms. Antall rader kan styres med `PERF_ROWS`, og tidene logges til filen i `PERF_LOG`.
+- **Faste trekk i store grupper:** nabo-tellingen innenfor ±10 % gjøres med sortering og to pekere (O(n log n)) i stedet for parvis sammenligning, og dobbelttrekk-sjekken bruker et datovindu. Det tok reklassifiseringen fra 3,8 s til 1,3 s på 50 000 rader uten å endre resultatene (fasiten er uendret).
+- **Tilgjengelighet:** alle trykkflater er minst 44 px, ikonknapper har `aria-label`, brytere er `role="switch"`, ark er `role="dialog"` med `aria-modal`, får fokus når de åpnes og gir fokus tilbake når de lukkes. Gruppefarger brukes som prikker og stolper, ikke som tekstfarge, fordi gul/oransje tekst ikke har nok kontrast på hvit bakgrunn.
+- **Mørk modus** følger systemet som standard og kan overstyres i innstillingene (`dark`-klasse på `<html>`); grafene leser temaet ved tegning.
+- **Tomtilstander** finnes for Oversikt (før første import), Transaksjoner, Statistikk, Faste, Personer og «Sjekk disse».
+- **Klassifiseringskilden** vises på norsk i detaljarket («butikkordboken · høy sikkerhet»).

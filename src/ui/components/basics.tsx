@@ -1,4 +1,4 @@
-import { useEffect, type ReactNode, type ButtonHTMLAttributes } from 'react';
+import { useEffect, useRef, type ReactNode, type ButtonHTMLAttributes } from 'react';
 import { createPortal } from 'react-dom';
 import { formatOre } from '../../core/money';
 import { cn } from '../data';
@@ -87,8 +87,11 @@ export interface SheetProps {
 
 /** Bottom sheet for details and choices. */
 export function Sheet({ open, onClose, title, children, tall }: SheetProps) {
+  const dialogRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (!open) return;
+    const previous = document.activeElement as HTMLElement | null;
+    dialogRef.current?.focus();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
     };
@@ -98,12 +101,15 @@ export function Sheet({ open, onClose, title, children, tall }: SheetProps) {
     return () => {
       window.removeEventListener('keydown', onKey);
       document.body.style.overflow = prev;
+      previous?.focus?.();
     };
   }, [open, onClose]);
   if (!open) return null;
   return createPortal(
     <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/40 sm:items-center" onClick={onClose}>
       <div
+        ref={dialogRef}
+        tabIndex={-1}
         role="dialog"
         aria-modal="true"
         aria-label={title}

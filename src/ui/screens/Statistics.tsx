@@ -4,7 +4,7 @@ import { useAsync, useData } from '../data';
 import { useLookups } from '../hooks';
 import { addMonths, formatMonth, monthEnd, monthKey, monthStart, todayIso } from '../../core/dates';
 import { monthRange } from '../../core/aggregate';
-import { Amount, Card, SectionTitle, Spinner, Toggle, inputClass } from '../components/basics';
+import { Amount, Card, EmptyState, SectionTitle, Spinner, Toggle, inputClass } from '../components/basics';
 import { BalanceLine, BarList, IncomeExpenseBars, StackedMonths } from '../components/Charts';
 import { cn } from '../data';
 
@@ -107,6 +107,8 @@ export function Statistics() {
 
       {loading && !data ? (
         <Spinner />
+      ) : s && data!.series.every((p) => p.incomeOre === 0 && p.expenseOre === 0) && s.txCount === 0 ? (
+        <EmptyState icon="📊" title="Ingen tall i perioden" text="Importer flere eksporter, eller velg en annen periode." />
       ) : s ? (
         <>
           <div className="grid grid-cols-3 gap-2 text-center">

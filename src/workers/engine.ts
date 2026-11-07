@@ -112,11 +112,18 @@ async function overview(month: string, today: string): Promise<OverviewResponse>
   const groups = await recurringGroups(today);
   const from = monthStart(month);
   const to = monthEnd(month);
-  const monthGroups = groups.filter((g) => c.txs.some((t) => g.txIds.includes(t.id!) && t.statDate >= from && t.statDate <= to));
-  const recurringMonthlyOre = monthGroups.reduce((a, g) => {
-    const inMonth = c.txs.filter((t) => g.txIds.includes(t.id!) && t.statDate >= from && t.statDate <= to);
-    return a + inMonth.reduce((x, t) => x + -t.amountOre, 0);
-  }, 0);
+  const groupOfTx = new Map<number, RecurringGroup>();
+  for (const g of groups) for (const id of g.txIds) groupOfTx.set(id, g);
+  const monthGroupKeys = new Set<string>();
+  let recurringMonthlyOre = 0;
+  for (const t of c.txs) {
+    if (t.statDate < from || t.statDate > to) continue;
+    const g = groupOfTx.get(t.id!);
+    if (!g) continue;
+    monthGroupKeys.add(g.key);
+    recurringMonthlyOre += -t.amountOre;
+  }
+  const monthGroups = groups.filter((g) => monthGroupKeys.has(g.key));
   const review = await reviewQueue();
   const lastImportAt = c.accounts.reduce<string | null>((a, acc) => (acc.lastImportAt && (!a || acc.lastImportAt > a) ? acc.lastImportAt : a), null);
   return {

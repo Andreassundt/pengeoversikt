@@ -10,6 +10,18 @@ import { useAsync, useData } from '../data';
 import { dismissDouble, setCategory, setNote, setOneOff, setSplits, unlockManual } from '../../db/actions';
 import { CAT } from '../../core/categories';
 
+const SOURCE_LABELS: Record<string, string> = {
+  manual: 'satt manuelt',
+  structural: 'bankens type/undertype',
+  rule: 'egen regel',
+  learned: 'lært fra retting',
+  dictionary: 'butikkordboken',
+  keyword: 'nøkkelord i meldingen',
+  person: 'personstandard',
+  heuristic: 'tommelfingerregel',
+  none: 'ingen treff',
+};
+
 function Row({ label, value }: { label: string; value: React.ReactNode }) {
   if (value === '' || value == null) return null;
   return (
@@ -171,7 +183,7 @@ export function TxDetail({ tx: txProp, ctx, onClose, onOpen }: { tx: Transaction
         />
         <Row label="Via" value={tx.provider ?? ''} />
         <Row label="Bokført" value={tx.bookedDate ? formatDateNo(tx.bookedDate) : ''} />
-        <Row label="Kilde" value={`${tx.source} · ${tx.confidence}`} />
+        <Row label="Kategorisert av" value={`${SOURCE_LABELS[tx.source] ?? tx.source} · ${tx.confidence} sikkerhet`} />
       </div>
 
       <div className="mt-3">
