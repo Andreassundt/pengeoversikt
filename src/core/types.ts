@@ -104,6 +104,8 @@ export interface NormalizedFields {
   /** Cleaned merchant text (original case, noise removed). */
   merchantText: string;
   merchantKey: string;
+  /** Pretty-cased fallback display name derived from the merchant text. */
+  merchantName: string;
 }
 
 export interface Transaction extends NormalizedFields {
@@ -112,6 +114,9 @@ export interface Transaction extends NormalizedFields {
   importId: number;
   raw: string[];
   dedupeKey: string;
+  /** Canonical name from the dictionary, a rule or a learned link (null = none). */
+  canonicalName: string | null;
+  /** Effective display name (canonical name, person name or merchant text). */
   displayName: string;
   categoryId: string;
   kind: Kind;
@@ -263,6 +268,31 @@ export interface ImportRecord {
   previousAccount: Pick<Account, 'balanceOre' | 'balanceDate' | 'lastImportEnd' | 'lastImportAt'> | null;
   accountCreated: boolean;
   undone: boolean;
+}
+
+export type RecurringInterval = 'monthly' | 'weekly' | 'yearly' | null;
+
+export interface RecurringGroup {
+  key: string;
+  name: string;
+  categoryId: string;
+  currency: string;
+  /** Last amount in the original currency's minor units. */
+  amountMinor: number;
+  /** Last amount in øre (positive). */
+  amountOre: number;
+  /** Estimated monthly cost in øre. */
+  monthlyOre: number;
+  interval: RecurringInterval;
+  lastDate: string;
+  nextDate: string | null;
+  count: number;
+  isNew: boolean;
+  stopped: boolean;
+  priceChange: boolean;
+  possibleDouble: boolean;
+  fast: boolean;
+  txIds: number[];
 }
 
 export interface SettingRow {

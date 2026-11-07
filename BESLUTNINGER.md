@@ -28,3 +28,18 @@ Valg som ikke står eksplisitt i PROMPT.md, med begrunnelse. Oppdateres per mile
 - **Kontonavn** tas fra «Overføring til egen konto» på tvers av alle filer i batchen og allerede lagrede kontoer. En konto uten kjent navn får kontonummeret som navn til et navn dukker opp (eller settes manuelt).
 - **Eiernavn** lagres i innstillinger første gang det oppdages og endres ikke automatisk etterpå.
 - **Klassifisering i milepæl 2** har bare de strukturelle reglene (intern overføring, egen konto i annen bank, lønn/NAV, lånesplitt, omkostninger); resten er «Uavklart» til milepæl 3.
+
+## Milepæl 3 – klassifisering og etterbehandling
+
+- **Ordboken** (`src/core/dictionary.ts`) er en flat datafil. Hvert mønster får `\b` foran hvert alternativ med mindre det starter med `^`. Entries uten kanonisk navn (f.eks. `RESTAURANT`, `FYSIO`) gir kategori, men visningsnavnet blir den rensede teksten i pen skrivemåte.
+- **Ordbok mot ikke-kortrader** prøves først mot motpartsnavnet, så mot beskrivelsen (uten datoprefiks og kontosuffiks). Aldri mot `Melding`, bortsett fra butikkdelen i kortmeldingen (den ligger allerede i `dictText`).
+- **Nøkkelord** gjelder bare rader som ikke er kortkjøp. Et ukjent kortkjøp blir «Uavklart» og læres via retting, i stedet for å gjette fra butikkteksten.
+- **«lav sikkerhet»-flagget** settes bare når en kategori faktisk er valgt med lav sikkerhet. «Uavklart» har sin egen kø og får ikke flagget i tillegg (fasiten har ingen Uavklart-rader med `lav_sikkerhet`).
+- **Refusjon (Kreditoverføring)** klassifiseres først via ordboken på butikkteksten i meldingen; etterbehandlingen finner kjøpet (samme butikknøkkel, samme beløp, inntil 60 dager før) og kopierer kategorien. Kobling lagres som `linkedTxId` begge veier.
+- **Personer** er motparter på vanlige betalinger: ikke kortkjøp, ikke rader som treffes av strukturelle regler (overføringer, lønn, lån, omkostninger), ikke eieren, ikke firma (AS/ASA/AB/BANK/N.V. osv. eller ordbokstreff). Navnet må komme fra et navnefelt eller være støttet av et kontonummer, så beskrivelser som «Mobilgiro m/melding» ikke blir personer. Grupper slås sammen når de deler kontonummer eller normalisert navn (union-find). Deling lagres som `noMerge`-navn på begge personene.
+- **Personens visningsnavn** regnes om ved hver reklassifisering (vanligste variant, blandet store/små bokstaver vinner ved likt antall) med mindre brukeren har gitt eget navn (`role = 'custom-name'`).
+- **Faste trekk:** kandidater er utgifter (`kind = expense`) med negativt beløp som ikke er refundert. Gruppe = kanonisk navn fra ordboken, ellers mottakerkonto for KID-regninger, ellers butikknøkkel. Referansebeløpet er det beløpet som har flest naboer innenfor ±10 % (i originalvaluta); medlemmene er naboene. Butikker merket `fast` (eller tekst med ABONNEMENT/SUBSCR/SUB) er faste fra første trekk; andre krever minst 3 trekk *og* et gjenkjent intervall, slik at tre tilfeldige like kjøp ikke blir et abonnement. Ukjent intervall behandles som månedlig i summene.
+- **Engangsposter** respekterer en manuell overstyring (`oneOffOverride`), ellers terskelen fra innstillingene.
+- **Interne par** kobles på dato, beløp og byttede kontonumre; brukes bare til visning.
+- **Retting:** «Gjelder alle» lager en lært kobling (eller personstandard for personbetalinger) og låser *ikke* raden, slik at reglene fortsatt styrer. «Bare denne» setter `manual = true`, som reklassifiseringen aldri rører. Alle handlinger i `src/db/actions.ts` er rene skrivinger; reklassifiseringen kjøres etterpå (i en Worker fra grensesnittet, direkte i testene).
+- **Reklassifisering** kjører alltid over alle rader (ikke-manuelle klassifiseres på nytt, personer synkroniseres, etterbehandling kjøres) og skriver bare rader der noe faktisk endret seg.

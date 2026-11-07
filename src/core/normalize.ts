@@ -83,5 +83,6 @@ export function normalizeRow(fields: string[]): NormalizedFields {
     dictText: merchant.dictText,
     merchantText: merchant.merchantText,
     merchantKey: merchant.merchantKey,
+    merchantName: merchant.fallbackName,
   };
 }
