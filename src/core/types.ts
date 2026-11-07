@@ -240,6 +240,8 @@ export interface FormatProfile {
 
 export interface ImportRecord {
   id?: number;
+  /** Files imported together share a batch id (used by undo). */
+  batchId: string;
   fileName: string;
   accountId: number;
   accountNumber: string;

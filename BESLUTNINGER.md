@@ -16,3 +16,15 @@ Valg som ikke står eksplisitt i PROMPT.md, med begrunnelse. Oppdateres per mile
 - **Butikknøkkel:** Koder som starter med `*` og inneholder siffer fjernes også inne i tokens («Revolut**1122*» → «REVOLUT»). Rene tall/koder (`^[\d.\-/:,]+$`) fjernes, men tokens med bokstaver og siffer (`ST1`, `7-ELEVEN`) beholdes. Stjerner fjernes fra nøkkelen, så `GOOGLE *YouTubePremium` og `GOOGLE*YOUTUBEPREMIUM` får samme nøkkel.
 - **Eier:** Vanligste `Avsender` på *bokførte* kortkjøp (reserverte rader har kontonavnet som avsender). Finnes ingen kortkjøp, brukes vanligste `Mottakernavn` på innbetalinger.
 - **Fixture-sjekken** leter også etter kontonumre med punktum (`1111.22.33001`), som forekommer i meldinger.
+
+## Milepæl 2 – database og import
+
+- **Splitter lagres på transaksjonen** (`splits: Split[] | null`) i stedet for i egen tabell. De er små, alltid lest sammen med raden, og aggregering trenger dem i samme omgang.
+- **Import i to faser:** `prepareImport` leser databasen og lager en plan (ingen skriving); `commitImport` skriver planen i én Dexie-transaksjon. Flere filer i samme batch kan gjelde samme konto, så planen holder løpende dedupe-tellinger og reserverte rader per konto mens den går gjennom filene.
+- **Hvilke av identiske rader som blir «nye»:** Ved n forekomster i filen og m i databasen settes de første n−m som nye; resten er duplikater. Radene er identiske, så valget har ingen betydning for dataene.
+- **Reservert-erstatning** bruker filens periode fra bunnteksten; mangler bunntekst, brukes første og siste raddato. «Minst like ny» betyr sluttdato ≥ kontoens siste importerte sluttdato, så en ny eksport samme dag erstatter reservasjonene.
+- **Saldo-anker:** Kontoens saldo settes fra bunnteksten når filens sluttdato er ≥ datoen for gjeldende anker. En eldre fil endrer verken saldo eller «siste import».
+- **Angre** gjelder hele siste batch (alle filer importert sammen): slettede rader fjernes, erstattede reserverte rader legges tilbake med sine gamle id-er, kontoens forrige saldo/dato gjenopprettes, og kontoer som ble opprettet av batchen og nå er tomme, slettes.
+- **Kontonavn** tas fra «Overføring til egen konto» på tvers av alle filer i batchen og allerede lagrede kontoer. En konto uten kjent navn får kontonummeret som navn til et navn dukker opp (eller settes manuelt).
+- **Eiernavn** lagres i innstillinger første gang det oppdages og endres ikke automatisk etterpå.
+- **Klassifisering i milepæl 2** har bare de strukturelle reglene (intern overføring, egen konto i annen bank, lønn/NAV, lånesplitt, omkostninger); resten er «Uavklart» til milepæl 3.
