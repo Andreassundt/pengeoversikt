@@ -1,0 +1,89 @@
+﻿Utført dato;Bokført dato;Rentedato;Beskrivelse;Type;Undertype;Fra konto;Avsender;Til konto;Mottakernavn;Beløp inn;Beløp ut;Valuta;Status;Melding/KID/Fakt.nr
+06.11.2026;06.11.2026;06.11.2026;Overføring fra Bolig;Overføring;Overføring til egen konto;1111 22 33003;Bolig;1111 22 33001;Brukskonto;20000;;NOK;Bokført;
+06.11.2026;06.11.2026;06.11.2026;NORDNET  BANK AB (97500000001);Betaling innland;Betaling med KID innland;1111 22 33001;Brukskonto;9750 00 00001;NORDNET  BANK AB;;-32000;NOK;Bokført;
+06.11.2026;;06.11.2026;REMA STORGATA;Varekjøp;;1111 22 33001;Brukskonto;;;;-53.5;NOK;Reservert;REMA STORGATA
+06.11.2026;;06.11.2026;Battle.net;Varekjøp;;1111 22 33001;Brukskonto;;;;-157;NOK;Reservert;Battle.net
+05.11.2026;05.11.2026;05.11.2026;Mia Leietaker Hansen;immediate;Straksbetaling;2222 33 44001;;1111 22 33001;Ola Fiktiv Testesen;2500;;NOK;Bokført;
+05.11.2026;05.11.2026;05.11.2026;05.11 KID 47099 STORGATA 1 OSLO;Varekjøp;Varekjøp debetkort;1111 22 33001;Ola Fiktiv Testesen;;;;-1250;NOK;Bokført;05.11 KID 47099 STORGATA 1 OSLO
+05.11.2026;05.11.2026;05.11.2026;05.11 ST1 BRYN TVETENVEIEN OSLO;Varekjøp;Varekjøp ubetjent;1111 22 33001;Ola Fiktiv Testesen;;;;-1402.62;NOK;Bokført;05.11 ST1 BRYN TVETENVEIEN OSLO
+05.11.2026;05.11.2026;05.11.2026;Revolut**1122*;Varekjøp;Varekjøp i utlandet;1111 22 33001;Ola Fiktiv Testesen;;;;-120;NOK;Bokført;*9876 04.11 NOK 120.00 Revolut**1122* Kurs: 1.0000
+04.11.2026;04.11.2026;04.11.2026;Mia Leietaker Hansen (22223344001);Betaling innland;Innlandsbetaling;1111 22 33001;Brukskonto;2222 33 44001;Mia Leietaker Hansen;;-188;NOK;Bokført;Mat
+04.11.2026;04.11.2026;04.11.2026;Til konto: 1111 22 33004;Betaling innland - Småsparing;Innlandsbetaling;1111 22 33001;Brukskonto;1111 22 33004;;;-50;NOK;Bokført;Småsparing 1 stk fast beløp
+02.11.2026;02.11.2026;02.11.2026;31.10 REMA STORGATA  OSLO;Varekjøp;Varekjøp debetkort;1111 22 33001;Ola Fiktiv Testesen;;;;-691.9;NOK;Bokført;31.10 REMA STORGATA  OSLO
+02.11.2026;02.11.2026;03.11.2026;Ad free for *QQ11RR22;Varekjøp;Varekjøp i utlandet;1111 22 33001;Ola Fiktiv Testesen;;;;-29;NOK;Bokført;*9876 01.11 NOK 29.00 Ad free for *QQ11RR22 Kurs: 1.0000
+02.11.2026;02.11.2026;02.11.2026;Mia Leietaker Hansen (22223344001);Betaling innland;Innlandsbetaling;1111 22 33001;Brukskonto;2222 33 44001;Mia Leietaker Hansen;;-2000;NOK;Bokført;Pass strøm
+30.10.2026;30.10.2026;30.10.2026;Mia Leietaker Hansen (22223344001);Betaling innland;Innlandsbetaling;1111 22 33001;Brukskonto;2222 33 44001;Mia Leietaker Hansen;;-500;NOK;Bokført;Tingtang
+30.10.2026;30.10.2026;30.10.2026;Mia Leietaker Hansen (22223344001);Betaling innland;Innlandsbetaling;1111 22 33001;Brukskonto;2222 33 44001;Mia Leietaker Hansen;;-1000;NOK;Bokført;MaAaat
+28.10.2026;28.10.2026;28.10.2026;27.10 APOTEK 1 STORGATA OSLO;Varekjøp;Varekjøp debetkort;1111 22 33001;Ola Fiktiv Testesen;;;;-87.7;NOK;Bokført;27.10 APOTEK 1 STORGATA OSLO
+28.10.2026;28.10.2026;28.10.2026;Mia Leietaker Hansen (22223344001);Betaling innland;Innlandsbetaling;1111 22 33001;Brukskonto;2222 33 44001;Mia Leietaker Hansen;;-1600;NOK;Bokført;Matstrøm
+27.10.2026;27.10.2026;28.10.2026;ANTHROPIC* CLAUDE SUB;Varekjøp;Varekjøp i utlandet;1111 22 33001;Ola Fiktiv Testesen;;;;-1189.19;NOK;Bokført;*9876 26.10 NOK 1189.19 ANTHROPIC* CLAUDE SUB Kurs: 1.0000
+27.10.2026;27.10.2026;28.10.2026;Prime Video;Varekjøp;Varekjøp i utlandet;1111 22 33001;Ola Fiktiv Testesen;;;;-79;NOK;Bokført;*9876 26.10 NOK 79.00 Prime Video Kurs: 1.0000
+26.10.2026;26.10.2026;26.10.2026;24.10 CIRCLE K GOL 539 SENTRUMSVEGEN GOL;Varekjøp;Varekjøp debetkort;1111 22 33001;Ola Fiktiv Testesen;;;;-44.9;NOK;Bokført;24.10 CIRCLE K GOL 539 SENTRUMSVEGEN GOL
+26.10.2026;26.10.2026;26.10.2026;24.10 CIRCLE K GOL 539 SENTRUMSVEGEN GOL;Varekjøp;Varekjøp ubetjent;1111 22 33001;Ola Fiktiv Testesen;;;;-1886.94;NOK;Bokført;24.10 CIRCLE K GOL 539 SENTRUMSVEGEN GOL
+26.10.2026;26.10.2026;27.10.2026;ANTHROPIC* CLAUDE SUB;Varekjøp;Varekjøp i utlandet;1111 22 33001;Ola Fiktiv Testesen;;;;-1149;NOK;Bokført;*9876 25.10 NOK 1149.00 ANTHROPIC* CLAUDE SUB Kurs: 1.0000
+26.10.2026;26.10.2026;26.10.2026;25638077 Xyzzy Handel;Varekjøp;Varekjøp i utlandet;1111 22 33001;Ola Fiktiv Testesen;;;;-32.3;NOK;Bokført;*9876 23.10 EUR 3.00 25638077 Xyzzy Handel Kurs: 10.7667
+23.10.2026;23.10.2026;23.10.2026;McDonalds 57800031;Varekjøp;Varekjøp debetkort;1111 22 33001;Ola Fiktiv Testesen;;;;-79;NOK;Bokført;*9876 21.10 NOK 79.00 McDonalds 57800031 Kurs: 1.0000
+22.10.2026;22.10.2026;22.10.2026;Lyse Tele AS (15060000001);Betaling innland;Betaling med KID innland;1111 22 33001;Brukskonto;1506 00 00001;Lyse Tele AS;;-539.69;NOK;Bokført;
+20.10.2026;20.10.2026;21.10.2026;WL *STEAM PURCHASE;Varekjøp;Varekjøp i utlandet;1111 22 33001;Ola Fiktiv Testesen;;;;-300;NOK;Bokført;*9876 19.10 NOK 300.00 WL *STEAM PURCHASE Kurs: 1.0000
+20.10.2026;20.10.2026;20.10.2026;Overføring fra Lønn;Overføring;Overføring til egen konto;1111 22 33002;Lønn;1111 22 33001;Brukskonto;3584.3;;NOK;Bokført;
+19.10.2026;19.10.2026;19.10.2026;PAYPAL *GOOGLE MACROFACTO;Varekjøp;Varekjøp debetkort;1111 22 33001;Ola Fiktiv Testesen;;;;-899;NOK;Bokført;*9876 17.10 NOK 899.00 PAYPAL *GOOGLE MACROFACTO Kurs: 1.0000
+19.10.2026;19.10.2026;18.10.2026;Overføring;Overføring;Kreditoverføring;;;1111 22 33001;Brukskonto;899;;NOK;Bokført;*9876 18.10 NOK 899.00 PAYPAL *GOOGLE MACROFACTO Kurs: 1.0000
+19.10.2026;19.10.2026;19.10.2026;OKQ8;Varekjøp;Varekjøp i utlandet;1111 22 33001;Ola Fiktiv Testesen;;;;-526.47;NOK;Bokført;*9876 15.10 SEK 535.23 OKQ8 Kurs: 0.9836
+16.10.2026;16.10.2026;16.10.2026;16.10 ELKJØP ALNA STRØMSVEIEN  OSLO;Varekjøp;Varekjøp debetkort;1111 22 33001;Ola Fiktiv Testesen;;;;-2735;NOK;Bokført;16.10 ELKJØP ALNA STRØMSVEIEN  OSLO
+16.10.2026;16.10.2026;16.10.2026;Hoeoeks AS Oslo Storgata;Varekjøp;Varekjøp debetkort;1111 22 33001;Ola Fiktiv Testesen;;;;-173.9;NOK;Bokført;*9876 15.10 NOK 173.90 Hoeoeks AS Oslo Storgata Kurs: 1.0000
+16.10.2026;16.10.2026;19.10.2026;GOOGLE*YOUTUBEPREMIUM;Varekjøp;Varekjøp i utlandet;1111 22 33001;Ola Fiktiv Testesen;;;;-269;NOK;Bokført;*9876 16.10 NOK 269.00 GOOGLE*YOUTUBEPREMIUM Kurs: 1.0000
+14.10.2026;14.10.2026;15.10.2026;W*TEKNIKMAGASINET.N;Varekjøp;Varekjøp i utlandet;1111 22 33001;Ola Fiktiv Testesen;;;;-134;NOK;Bokført;*9876 13.10 NOK 134.00 W*TEKNIKMAGASINET.N Kurs: 1.0000
+13.10.2026;13.10.2026;13.10.2026;Vipps*ISS Facility Servic;Varekjøp;Varekjøp debetkort;1111 22 33001;Ola Fiktiv Testesen;;;;-36;NOK;Bokført;*9876 12.10 NOK 36.00 Vipps*ISS Facility Servic Kurs: 1.0000
+12.10.2026;12.10.2026;12.10.2026;OPENAI *CHATGPT SUBSCR;Varekjøp;Varekjøp i utlandet;1111 22 33001;Ola Fiktiv Testesen;;;;-245.19;NOK;Bokført;*9876 09.10 USD 25.00 OPENAI *CHATGPT SUBSCR Kurs: 9.8076
+12.10.2026;12.10.2026;10.10.2026;Overføring fra Bolig;Overføring;Overføring til egen konto;1111 22 33003;Bolig;1111 22 33001;Brukskonto;3000;;NOK;Bokført;
+12.10.2026;12.10.2026;10.10.2026;Overføring fra Bolig;Overføring;Overføring til egen konto;1111 22 33003;Bolig;1111 22 33001;Brukskonto;3000;;NOK;Bokført;
+12.10.2026;12.10.2026;10.10.2026;Overføring fra Bolig;Overføring;Overføring til egen konto;1111 22 33003;Bolig;1111 22 33001;Brukskonto;2000;;NOK;Bokført;
+12.10.2026;12.10.2026;12.10.2026;Fremtind Livsforsikring AS (90010000001);Betaling innland;Betaling med KID innland;1111 22 33001;Brukskonto;9001 00 00001;Fremtind Livsforsikring AS;;-785.34;NOK;Bokført;
+08.10.2026;08.10.2026;08.10.2026;07.10 ALNA MØBEL OG I SMALVOLLVEIE OSLO;Varekjøp;Varekjøp debetkort;1111 22 33001;Ola Fiktiv Testesen;;;;-21999.5;NOK;Bokført;07.10 ALNA MØBEL OG I SMALVOLLVEIE OSLO
+06.10.2026;06.10.2026;06.10.2026;05.10 BK 5006 STRØMME STØPERIVEIEN STRØMMEN;Varekjøp;Varekjøp debetkort;1111 22 33001;Ola Fiktiv Testesen;;;;-197;NOK;Bokført;05.10 BK 5006 STRØMME STØPERIVEIEN STRØMMEN
+05.10.2026;05.10.2026;05.10.2026;03.10 204 JERNIA BRYN TVETENVEIEN OSLO;Varekjøp;Varekjøp debetkort;1111 22 33001;Ola Fiktiv Testesen;;;;-1999;NOK;Bokført;03.10 204 JERNIA BRYN TVETENVEIEN OSLO
+05.10.2026;05.10.2026;05.10.2026;Vipps*Elkjoep nettbutikk;Varekjøp;Varekjøp debetkort;1111 22 33001;Ola Fiktiv Testesen;;;;-8990;NOK;Bokført;*9876 02.10 NOK 8990.00 Vipps*Elkjoep nettbutikk Kurs: 1.0000
+02.10.2026;02.10.2026;05.10.2026;Ad free for *ZX98YW76;Varekjøp;Varekjøp i utlandet;1111 22 33001;Ola Fiktiv Testesen;;;;-29;NOK;Bokført;*9876 01.10 NOK 29.00 Ad free for *ZX98YW76 Kurs: 1.0000
+02.10.2026;02.10.2026;02.10.2026;Gebyr Vipps 36400000001 (50050000001);Betaling innland;Innlandsbetaling;1111 22 33001;Brukskonto;5005 00 00001;Gebyr Vipps 36400000001;;-60.15;NOK;Bokført;36400000001 Gebyr Vipps
+02.10.2026;02.10.2026;02.10.2026;Kari Kasserer (44445566004);Betaling innland;Innlandsbetaling;1111 22 33001;Brukskonto;4444 55 66004;Kari Kasserer;;-6015;NOK;Bokført;Felleskostnader Oktober
+01.10.2026;01.10.2026;01.10.2026;PAYPAL_*TEST FYSIOTERAPI;Varekjøp;Varekjøp debetkort;1111 22 33001;Ola Fiktiv Testesen;;;;-190;NOK;Bokført;*9876 30.09 NOK 190.00 PAYPAL_*TEST FYSIOTERAPI Kurs: 1.0000
+01.10.2026;01.10.2026;01.10.2026;Overføring fra Bolig;Overføring;Overføring til egen konto;1111 22 33003;Bolig;1111 22 33001;Brukskonto;35000;;NOK;Bokført;
+28.09.2026;28.09.2026;28.09.2026;Prime Video;Varekjøp;Varekjøp i utlandet;1111 22 33001;Ola Fiktiv Testesen;;;;-79;NOK;Bokført;*9876 26.09 NOK 79.00 Prime Video Kurs: 1.0000
+28.09.2026;28.09.2026;28.09.2026;28.09 EXPRESS BRYN TVETENVEIEN OSLO;Varekjøp;Varekjøp ubetjent;1111 22 33001;Ola Fiktiv Testesen;;;;-1692.14;NOK;Bokført;28.09 EXPRESS BRYN TVETENVEIEN OSLO
+25.09.2026;25.09.2026;25.09.2026;Per Lagkasse (44445566003);Betaling innland;Innlandsbetaling;1111 22 33001;Brukskonto;4444 55 66003;Per Lagkasse;;-660;NOK;Bokført;Botkassa dekker bøter
+25.09.2026;25.09.2026;25.09.2026;Børge Testesen;immediate;Straksbetaling;1111 22 39999;;1111 22 33001;Ola Fiktiv Testesen;1542;;NOK;Bokført;Siste mat i huset
+22.09.2026;22.09.2026;22.09.2026;Lyse Tele AS (15060000001);Betaling innland;Betaling med KID innland;1111 22 33001;Brukskonto;1506 00 00001;Lyse Tele AS;;-539.69;NOK;Bokført;
+21.09.2026;21.09.2026;21.09.2026;19.09 APOTEK 1 STORGATA OSLO;Varekjøp;Varekjøp debetkort;1111 22 33001;Ola Fiktiv Testesen;;;;-153.1;NOK;Bokført;19.09 APOTEK 1 STORGATA OSLO
+18.09.2026;18.09.2026;18.09.2026;Overføring fra Bolig;Overføring;Overføring til egen konto;1111 22 33003;Bolig;1111 22 33001;Brukskonto;20000;;NOK;Bokført;
+16.09.2026;16.09.2026;16.09.2026;GOOGLE*YOUTUBEPREMIUM;Varekjøp;Varekjøp i utlandet;1111 22 33001;Ola Fiktiv Testesen;;;;-269;NOK;Bokført;*9876 16.09 NOK 269.00 GOOGLE*YOUTUBEPREMIUM Kurs: 1.0000
+16.09.2026;16.09.2026;16.09.2026;Til konto: 1111 22 33004;Betaling innland - Småsparing;Innlandsbetaling;1111 22 33001;Brukskonto;1111 22 33004;;;-150;NOK;Bokført;Småsparing 3 stk fast beløp
+15.09.2026;15.09.2026;15.09.2026;Lars Venn (44445566002);Betaling innland;Innlandsbetaling;1111 22 33001;Brukskonto;4444 55 66002;Lars Venn;;-260;NOK;Bokført;Risbolle
+10.09.2026;10.09.2026;11.09.2026;OPENAI *CHATGPT SUBSCR;Varekjøp;Varekjøp i utlandet;1111 22 33001;Ola Fiktiv Testesen;;;;-243.45;NOK;Bokført;*9876 09.09 USD 25.00 OPENAI *CHATGPT SUBSCR Kurs: 9.7380
+08.09.2026;08.09.2026;08.09.2026;ADYEN N.V.;Betaling innland;Overføring fra annen konto;6100 00 00001;ADYEN N.V.;1111 22 33001;Ola Fiktiv Testesen;8500;;NOK;Bokført;"FINNkode: 123456789 XNN00TESTKODE
+FINNkode123456789"
+07.09.2026;07.09.2026;07.09.2026;04.09 VINMONOPOLET OSLO CITY OSLO;Varekjøp;Varekjøp debetkort;1111 22 33001;Ola Fiktiv Testesen;;;;-646.6;NOK;Bokført;04.09 VINMONOPOLET OSLO CITY OSLO
+07.09.2026;07.09.2026;05.09.2026;Overføring;Overføring;Kreditoverføring;;;1111 22 33001;Brukskonto;390;;NOK;Bokført;*9876 05.09 NOK 390.00 PAYPAL *STEAM GAMES Kurs: 1.0000
+04.09.2026;04.09.2026;07.09.2026;Prime Video;Varekjøp;Varekjøp i utlandet;1111 22 33001;Ola Fiktiv Testesen;;;;-79;NOK;Bokført;*9876 03.09 NOK 79.00 Prime Video Kurs: 1.0000
+02.09.2026;02.09.2026;03.09.2026;Ad free for *AB12CD34;Varekjøp;Varekjøp i utlandet;1111 22 33001;Ola Fiktiv Testesen;;;;-29;NOK;Bokført;*9876 01.09 NOK 29.00 Ad free for *AB12CD34 Kurs: 1.0000
+31.08.2026;31.08.2026;01.09.2026;PAYPAL *STEAM GAMES;Varekjøp;Varekjøp i utlandet;1111 22 33001;Ola Fiktiv Testesen;;;;-390;NOK;Bokført;*9876 28.08 NOK 390.00 PAYPAL *STEAM GAMES Kurs: 1.0000
+31.08.2026;31.08.2026;31.08.2026;OLA FIKTIV TESTESEN;Betaling innland;Overføring fra annen konto;6000 11 22333;OLA FIKTIV TESTESEN;1111 22 33001;Ola Fiktiv Testesen;4419.34;;NOK;Bokført;"MOBILBANK DATO 31.08.2026 KL. 09.24.17
+."
+31.08.2026;31.08.2026;31.08.2026;29.08 MCD 072 STORO SLEPENDENVEI OSLO;Varekjøp;Varekjøp debetkort;1111 22 33001;Ola Fiktiv Testesen;;;;-260;NOK;Bokført;29.08 MCD 072 STORO SLEPENDENVEI OSLO
+31.08.2026;31.08.2026;31.08.2026;Mia Leietaker Hansen (22223344001);immediate;Straksbetaling;1111 22 33001;Ola Fiktiv Testesen;2222 33 44001;Mia Leietaker Hansen;;-3622;NOK;Bokført;"Til: Mia Leietaker Hansen
+Budsjett september"
+31.08.2026;31.08.2026;30.08.2026;Børge Testesen;immediate;Straksbetaling;1111 22 39999;;1111 22 33001;Ola Fiktiv Testesen;1710;;NOK;Bokført;"Fra: Børge Testesen Betalt: 30.08.26
+Mat"
+28.08.2026;28.08.2026;28.08.2026;28.08 KIWI 123 BRYN BUSSERULLEN  OSLO;Varekjøp;Varekjøp debetkort;1111 22 33001;Ola Fiktiv Testesen;;;;-1709.02;NOK;Bokført;28.08 KIWI 123 BRYN BUSSERULLEN  OSLO
+25.08.2026;25.08.2026;25.08.2026;NORSK TIPPING ABONNEMENT;Varekjøp;Varekjøp debetkort;1111 22 33001;Ola Fiktiv Testesen;;;;-75;NOK;Bokført;*9876 24.08 NOK 75.00 NORSK TIPPING ABONNEMENT Kurs: 1.0000
+24.08.2026;24.08.2026;24.08.2026;WL*GOOGLE Google Play A;Varekjøp;Varekjøp i utlandet;1111 22 33001;Ola Fiktiv Testesen;;;;-129;NOK;Bokført;*9876 22.08 NOK 129.00 WL*GOOGLE  Google Play A Kurs: 1.0000
+17.08.2026;17.08.2026;18.08.2026;GOOGLE *YouTubePremium;Varekjøp;Varekjøp i utlandet;1111 22 33001;Ola Fiktiv Testesen;;;;-269;NOK;Bokført;*9876 16.08 NOK 269.00 GOOGLE *YouTubePremium Kurs: 1.0000
+16.08.2026;16.08.2026;16.08.2026;OLA FIKTIV TESTESEN;Betaling innland;Overføring fra annen konto;6000 11 22334;OLA FIKTIV TESTESEN;1111 22 33001;Ola Fiktiv Testesen;10000;;NOK;Bokført;"MOBILBANK DATO 16.08.2026 KL. 13.13.25
+Startkapital"
+;;;;;;;;;;;;;;
+Total beløp inn på konto:;;116 544,64 NOK;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+Totalt beløp ut av konto:;;-102 968,29 NOK;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+Inngående saldo pr. 07.11.2025:;;0,00 NOK;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+Utgående  saldo pr. 07.11.2026:;;13 576,35 NOK;;;;;;;;;;;;

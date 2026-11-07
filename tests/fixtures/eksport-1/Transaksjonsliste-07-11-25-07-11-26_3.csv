@@ -1,0 +1,16 @@
+﻿Utført dato;Bokført dato;Rentedato;Beskrivelse;Type;Undertype;Fra konto;Avsender;Til konto;Mottakernavn;Beløp inn;Beløp ut;Valuta;Status;Melding/KID/Fakt.nr
+04.11.2026;04.11.2026;04.11.2026;Ola Fiktiv Testesen;Betaling innland - Småsparing;Innlandsbetaling;1111 22 33001;Ola Fiktiv Testesen;1111 22 33004;Ola Fiktiv Testesen;50;;NOK;Bokført;Småsparing 1 stk fast beløp
+29.09.2026;29.09.2026;29.09.2026;Testbanken (11114499001);Betaling innland;Overføring til annen konto;1111 22 33004;Sparing;1111 44 99001;Testbanken;;-1250000;NOK;Bokført;2415999
+25.09.2026;25.09.2026;25.09.2026;B@RGE TESTESEN;Betaling innland;Overføring fra annen konto;3333 44 55001;B@RGE TESTESEN;1111 22 33004;Ola Fiktiv Testesen;900000;;NOK;Bokført;"NETTBANK DATO 24.09.2026 KL. 17.18.02
+Gave til boligkj|p p} Bryn"
+18.09.2026;18.09.2026;18.09.2026;Overføring fra Lønn;Overføring;Overføring til egen konto;1111 22 33002;Lønn;1111 22 33004;Sparing;30000;;NOK;Bokført;Fra: Ola Fiktiv Testesen Betalt: 18.09.26
+18.09.2026;18.09.2026;18.09.2026;Overføring fra Bolig;Overføring;Overføring til egen konto;1111 22 33003;Bolig;1111 22 33004;Sparing;320000;;NOK;Bokført;
+16.09.2026;16.09.2026;16.09.2026;Ola Fiktiv Testesen;Betaling innland - Småsparing;Innlandsbetaling;1111 22 33001;Ola Fiktiv Testesen;1111 22 33004;Ola Fiktiv Testesen;150;;NOK;Bokført;Småsparing 3 stk fast beløp
+;;;;;;;;;;;;;;
+Total beløp inn på konto:;;1 250 200,00 NOK;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+Totalt beløp ut av konto:;;-1 250 000,00 NOK;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+Inngående saldo pr. 07.11.2025:;;0,00 NOK;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+Utgående  saldo pr. 07.11.2026:;;0,00 NOK;;;;;;;;;;;;

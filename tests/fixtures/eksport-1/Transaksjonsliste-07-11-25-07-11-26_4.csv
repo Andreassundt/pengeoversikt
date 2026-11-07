@@ -1,0 +1,11 @@
+﻿Utført dato;Bokført dato;Rentedato;Beskrivelse;Type;Undertype;Fra konto;Avsender;Til konto;Mottakernavn;Beløp inn;Beløp ut;Valuta;Status;Melding/KID/Fakt.nr
+12.10.2026;12.10.2026;11.10.2026;Overføring fra Bolig;Overføring;Overføring til egen konto;1111 22 33003;Bolig;1111 22 33005;Forsikringer;9000;;NOK;Bokført;
+12.10.2026;12.10.2026;11.10.2026;Overføring fra Bolig;Overføring;Overføring til egen konto;1111 22 33003;Bolig;1111 22 33005;Forsikringer;1000;;NOK;Bokført;
+;;;;;;;;;;;;;;
+Total beløp inn på konto:;;10 000,00 NOK;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+Totalt beløp ut av konto:;;0,00 NOK;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+Inngående saldo pr. 07.11.2025:;;0,00 NOK;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+Utgående  saldo pr. 07.11.2026:;;10 000,00 NOK;;;;;;;;;;;;

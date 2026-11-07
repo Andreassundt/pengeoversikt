@@ -1,0 +1,14 @@
+﻿Utført dato;Bokført dato;Rentedato;Beskrivelse;Type;Undertype;Fra konto;Avsender;Til konto;Mottakernavn;Beløp inn;Beløp ut;Valuta;Status;Melding/KID/Fakt.nr
+20.10.2026;20.10.2026;20.10.2026;Overføring til Brukskonto;Overføring;Overføring til egen konto;1111 22 33002;Lønn;1111 22 33001;Brukskonto;;-3584.3;NOK;Bokført;Til: 1111.22.33001 Betalt: 20.10.26
+14.10.2026;14.10.2026;14.10.2026;Lønn fra EKSEMPEL AS;Lønn;Lønn;8100 00 00001;;1111 22 33002;Ola Fiktiv Testesen;31720.3;;NOK;Bokført;Fra: EKSEMPEL AS
+14.10.2026;14.10.2026;14.10.2026;Overføring til Bolig;Overføring;Overføring til egen konto;1111 22 33002;Lønn;1111 22 33003;Bolig;;-30000;NOK;Bokført;
+18.09.2026;18.09.2026;18.09.2026;Overføring til Sparing;Overføring;Overføring til egen konto;1111 22 33002;Lønn;1111 22 33004;Sparing;;-30000;NOK;Bokført;Til: 1111.22.33004 Betalt: 18.09.26
+14.09.2026;14.09.2026;14.09.2026;Lønn fra EKSEMPEL AS;Lønn;Lønn;8100 00 00001;;1111 22 33002;Ola Fiktiv Testesen;31864;;NOK;Bokført;Fra: EKSEMPEL AS
+;;;;;;;;;;;;;;
+Total beløp inn på konto:;;63 584,30 NOK;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+Totalt beløp ut av konto:;;-63 584,30 NOK;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+Inngående saldo pr. 07.11.2025:;;0,00 NOK;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+Utgående  saldo pr. 07.11.2026:;;0,00 NOK;;;;;;;;;;;;

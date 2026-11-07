@@ -1,0 +1,34 @@
+﻿Utført dato;Bokført dato;Rentedato;Beskrivelse;Type;Undertype;Fra konto;Avsender;Til konto;Mottakernavn;Beløp inn;Beløp ut;Valuta;Status;Melding/KID/Fakt.nr
+06.11.2026;06.11.2026;06.11.2026;Overføring til Brukskonto;Overføring;Overføring til egen konto;1111 22 33003;Bolig;1111 22 33001;Brukskonto;;-20000;NOK;Bokført;
+21.10.2026;21.10.2026;21.10.2026;EIENDOMSMEGLER TEST AS;Betaling innland;Overføring fra annen konto;9400 00 00001;EIENDOMSMEGLER TEST AS;1111 22 33003;Ola Fiktiv Testesen;2078.68;;NOK;Bokført;
+19.10.2026;19.10.2026;19.10.2026;Pensjon fra NAV;Lønn;Pensjon;7694 00 00001;;1111 22 33003;Ola Fiktiv Testesen;3558;;NOK;Bokført;
+15.10.2026;15.10.2026;15.10.2026;Til konto: 1111 77 00001;Betaling innland;Nedbetaling av lån;1111 22 33003;Bolig;1111 77 00001;;;-13509;NOK;Bokført;"Til :11117700001
+     Avdrag:             kr         4.972,00
+     Renter:             kr         8.467,00
+     Terminomkostninger: kr            70,00"
+14.10.2026;14.10.2026;14.10.2026;Overføring fra Lønn;Overføring;Overføring til egen konto;1111 22 33002;Lønn;1111 22 33003;Bolig;30000;;NOK;Bokført;
+12.10.2026;12.10.2026;10.10.2026;Overføring til Brukskonto;Overføring;Overføring til egen konto;1111 22 33003;Bolig;1111 22 33001;Brukskonto;;-3000;NOK;Bokført;
+12.10.2026;12.10.2026;10.10.2026;Overføring til Brukskonto;Overføring;Overføring til egen konto;1111 22 33003;Bolig;1111 22 33001;Brukskonto;;-3000;NOK;Bokført;
+12.10.2026;12.10.2026;10.10.2026;Overføring til Brukskonto;Overføring;Overføring til egen konto;1111 22 33003;Bolig;1111 22 33001;Brukskonto;;-2000;NOK;Bokført;
+12.10.2026;12.10.2026;11.10.2026;Overføring til Forsikringer;Overføring;Overføring til egen konto;1111 22 33003;Bolig;1111 22 33005;Forsikringer;;-9000;NOK;Bokført;
+12.10.2026;12.10.2026;11.10.2026;Overføring til Forsikringer;Overføring;Overføring til egen konto;1111 22 33003;Bolig;1111 22 33005;Forsikringer;;-1000;NOK;Bokført;
+06.10.2026;06.10.2026;06.10.2026;Mia Leietaker Hansen;Betaling innland;Overføring fra annen konto;2222 33 44001;Mia Leietaker Hansen;1111 22 33003;Ola Fiktiv Testesen;13000;;NOK;Bokført;Husleie
+01.10.2026;01.10.2026;01.10.2026;Overføring til Brukskonto;Overføring;Overføring til egen konto;1111 22 33003;Bolig;1111 22 33001;Brukskonto;;-35000;NOK;Bokført;
+30.09.2026;30.09.2026;30.09.2026;Mobilgiro m/melding;Betaling;Omkostninger;1111 22 33003;Ola Fiktiv Testesen;;;;-60;NOK;Bokført;Mobilgiro m/melding
+18.09.2026;18.09.2026;18.09.2026;Overføring til Sparing;Overføring;Overføring til egen konto;1111 22 33003;Bolig;1111 22 33004;Sparing;;-320000;NOK;Bokført;
+18.09.2026;18.09.2026;18.09.2026;Overføring til Brukskonto;Overføring;Overføring til egen konto;1111 22 33003;Bolig;1111 22 33001;Brukskonto;;-20000;NOK;Bokført;
+17.09.2026;17.09.2026;17.09.2026;Pensjon fra NAV;Lønn;Pensjon;7694 00 00001;;1111 22 33003;Ola Fiktiv Testesen;3558;;NOK;Bokført;
+17.09.2026;17.09.2026;17.09.2026;OLA FIKTIV TESTESEN;Betaling innland;Overføring fra annen konto;;OLA FIKTIV TESTESEN;1111 22 33003;Ola Fiktiv Testesen;196581.65;;NOK;Bokført;OPPGJ@R AV KONTO
+17.09.2026;17.09.2026;17.09.2026;NORDNET BANK;Betaling innland;Overføring fra annen konto;9750 00 00001;NORDNET BANK;1111 22 33003;Ola Fiktiv Testesen;200000;;NOK;Bokført;Uttak Nordnet
+15.09.2026;15.09.2026;15.09.2026;Til konto: 6000 99 88777;Betaling innland;Betaling med melding innland;1111 22 33003;Bolig;6000 99 88777;;;-11500;NOK;Bokført;Husleie Mia Hansen
+02.09.2026;02.09.2026;02.09.2026;Mia Leietaker Hansen;Betaling innland;Overføring fra annen konto;2222 33 44002;Mia Leietaker Hansen;1111 22 33003;Ola Fiktiv Testesen;7066;;NOK;Bokført;.
+21.08.2026;21.08.2026;21.08.2026;Mia L Hansen;Betaling innland;Overføring fra annen konto;2222 33 44001;Mia L Hansen;1111 22 33003;Ola Fiktiv Testesen;8000;;NOK;Bokført;"Fra: Mia L Hansen Betalt: 20.08.26
+."
+;;;;;;;;;;;;;;
+Total beløp inn på konto:;;463 842,33 NOK;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+Totalt beløp ut av konto:;;-438 069,00 NOK;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+Inngående saldo pr. 07.11.2025:;;0,00 NOK;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+Utgående  saldo pr. 07.11.2026:;;25 773,33 NOK;;;;;;;;;;;;
