@@ -57,3 +57,12 @@ Valg som ikke står eksplisitt i PROMPT.md, med begrunnelse. Oppdateres per mile
 - **Playwright kjører iPhone-profilen i Chromium** (ikke WebKit) slik at CI bare trenger én nettleser. Viewport, touch og user agent er fortsatt iPhone 13.
 - **Dev-server på port 5178**, fordi 5173 var opptatt på utviklingsmaskinen.
 - **Kategori-sammenslåing** flytter transaksjoner, splitter, lærte koblinger, regler og personstandarder; standardkategorier skjules i stedet for å slettes, så klassifiseringen aldri peker på en kategori som ikke finnes.
+
+## Milepæl 5 – sikkerhetskopi, PWA, deling og README
+
+- **Sikkerhetskopi** er én JSON-fil med alle tabeller og `schemaVersion`. Kryptert variant: AES-GCM 256 med nøkkel fra PBKDF2-SHA256 (600 000 iterasjoner), tilfeldig salt (16 byte) og IV (12 byte), alt base64 i en konvolutt med `encrypted: true`. Gjenoppretting nekter kopier fra nyere skjemaversjoner.
+- **Levering av filer:** `navigator.share` med fil der det støttes (mobil), ellers nedlasting via `<a download>`. Avbrutt deling regnes ikke som feil.
+- **CSV-eksport** skriver én linje per splitt (lånet blir tre linjer), semikolon, CRLF og BOM, slik at norsk Excel åpner den direkte.
+- **Web Share Target:** service workeren tar imot POST til `<base>share-target`, legger filene i en Cache (`pengeoversikt-shared-files`) med filnavn i en header, og svarer med redirect til `#/import?shared=n`. Appen leser og tømmer cachen når ruten `/import` åpnes, og åpner importarket med filene. Ingenting sendes noe sted.
+- **Ikoner** genereres fra en innebygd SVG med `sharp` (`npm run icons`): vanlig 192/512, maskable med ekstra luft, og apple-touch-icon 180.
+- **Deploy** bruker `BASE_PATH=/<repo>/` i workflowen; `start_url`, `scope` og share-target-adressen følger `base`, så appen virker både på rot og under et repo-navn på GitHub Pages.
