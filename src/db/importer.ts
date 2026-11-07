@@ -1,5 +1,5 @@
 import type { PengeDb } from './schema';
-import type { Account, ImportRecord, ParsedFile, Transaction } from '../core/types';
+import type { Account, ImportRecord, ParsedFile, Person, Transaction } from '../core/types';
 import { RAW } from '../core/types';
 import { parseFileText } from '../core/parse';
 import { collectAccountNames, detectAccountNumber, detectOwner } from '../core/accounts';
