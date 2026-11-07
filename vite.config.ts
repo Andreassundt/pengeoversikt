@@ -56,6 +56,6 @@ export default defineConfig({
   ],
   worker: { format: 'es' },
   build: { target: 'es2022', sourcemap: false },
-  server: { port: 5173, strictPort: true },
+  server: { port: 5178, strictPort: true },
   preview: { port: 4173, strictPort: true },
 });

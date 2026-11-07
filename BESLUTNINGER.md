@@ -43,3 +43,17 @@ Valg som ikke står eksplisitt i PROMPT.md, med begrunnelse. Oppdateres per mile
 - **Interne par** kobles på dato, beløp og byttede kontonumre; brukes bare til visning.
 - **Retting:** «Gjelder alle» lager en lært kobling (eller personstandard for personbetalinger) og låser *ikke* raden, slik at reglene fortsatt styrer. «Bare denne» setter `manual = true`, som reklassifiseringen aldri rører. Alle handlinger i `src/db/actions.ts` er rene skrivinger; reklassifiseringen kjøres etterpå (i en Worker fra grensesnittet, direkte i testene).
 - **Reklassifisering** kjører alltid over alle rader (ikke-manuelle klassifiseres på nytt, personer synkroniseres, etterbehandling kjøres) og skriver bare rader der noe faktisk endret seg.
+
+## Milepæl 4 – skjermer, aggregering og Worker
+
+- **Worker-motoren** (`src/workers/engine.ts`) åpner sin egen Dexie-tilkobling og svarer på forespørsler (oversikt, statistikk, faste trekk, sjekk-kø, veiviser, reklassifisering). Den holder alle transaksjoner i minnet med memoisering per spørring og tømmes ved `invalidate`. Hovedtråden gjør bare små skrivinger (`src/db/actions.ts`) og ber så Workeren reklassifisere. Finnes ikke `Worker` (tester), kjøres samme kode i tråden.
+- **Dataoppdatering i React:** et enkelt `version`-tall i `DataProvider` økes etter hver skriving; alle `useAsync`-spørringer kjører på nytt da. Ingen liveQuery, fordi endringene skjer i Workeren og versjonstallet er enklere å resonnere om.
+- **Dev-only:** `window.__penge` (db og motor) settes bare i utviklingsmodus, for feilsøking i nettleseren.
+- **Statistikkdato styrer alt** (måneder, perioder, grafer). Saldohistorikken bruker bankens utført-dato og inkluderer reserverte rader, fordi det er slik bankens saldo er regnet.
+- **«Normalt forbruk mot snittet»:** snittet regnes over de av de tre forrige månedene som har data, så én tom måned ikke halverer snittet.
+- **Faste trekk per måned** på Oversikt er summen av de gjenkjente trekkene som faktisk ble trukket i måneden (ikke estimatet).
+- **Topp butikker** grupperes på visningsnavn, slik at «Rema 1000» samler alle Rema-butikker.
+- **Veiviseren** kom i milepæl 4 (ikke 5) fordi Playwright-testen for oktober-tallene krever testoppsettet via grensesnittet. Personlinjene er per (person, retning, min konto); valget lagres som personstandard for akkurat den kontoen.
+- **Playwright kjører iPhone-profilen i Chromium** (ikke WebKit) slik at CI bare trenger én nettleser. Viewport, touch og user agent er fortsatt iPhone 13.
+- **Dev-server på port 5178**, fordi 5173 var opptatt på utviklingsmaskinen.
+- **Kategori-sammenslåing** flytter transaksjoner, splitter, lærte koblinger, regler og personstandarder; standardkategorier skjules i stedet for å slettes, så klassifiseringen aldri peker på en kategori som ikke finnes.

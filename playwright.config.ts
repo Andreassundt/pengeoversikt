@@ -7,13 +7,13 @@ export default defineConfig({
   retries: process.env.CI ? 1 : 0,
   reporter: process.env.CI ? 'github' : 'list',
   use: {
-    baseURL: 'http://localhost:5173',
+    baseURL: 'http://localhost:5178',
     trace: 'retain-on-failure',
   },
-  projects: [{ name: 'iphone', use: { ...devices['iPhone 13'] } }],
+  projects: [{ name: 'iphone', use: { ...devices['iPhone 13'], browserName: 'chromium' } }],
   webServer: {
     command: 'npm run dev',
-    url: 'http://localhost:5173',
+    url: 'http://localhost:5178',
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
   },
